@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+	<style>
+	@font-face {
+    font-family: Geometria;
+    src: url(geometria_font/Geometria.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(geometria_font/Geometria-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(geometria_font/Geometria-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(geometria_font/geometria-light.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(geometria_font/geometria-medium.ttf);
+    font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #1C448E;
+  padding: 20px 0;
+  height: 90px;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: DodgerBlue;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+.is-sticky #header {
+  background:DodgerBlue;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+  color: #03C4EB;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 15px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+  background: #ccc;
+  border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li:hover {
+  background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+  color: #333;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #03C4EB;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #03C4EB;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+.read{
+  text-align: center;
+   font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 1px;
+  border-top: 10px;
+  border-bottom: 10px;
+}
+
+section.blog-post-area {
+    margin-top: 50px;
+    background-color: #22AED1;
+}
+
+section.blog-post-area .big-image {
+    float: left;
+    width: 50%;
+    padding-right: 35px;
+}
+
+section.blog-post-area .big-text {
+    float: right;
+    width: 50%;
+    padding-right: 20px;
+}
+
+section.blog-post-area img {
+    width: 100%;
+}
+
+section.blog-post-area .big-text h3 {
+    margin: 10px 0 0;
+}
+
+section.blog-post-area .big-text h3 a {
+    font-family: Geometria;
+    font-weight: 700;
+    font-size: 40px;
+    color: #061e37;
+    text-decoration: none;
+}
+
+section.blog-post-area .big-text p {
+    color: #061e37;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 18px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+section.blog-post-area .big-text h4 {
+    margin-top: 25px;
+    padding-top: 30px;
+    position: relative;
+}
+
+section.blog-post-area .big-text h4::before {
+    background: #e6e6e6 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+section.blog-post-area .single-post {
+    padding-right: 20px;
+    margin: 100px 0px 0px;
+}
+
+section.blog-post-area h4 span {
+    font-family: Geometria;
+    font-weight: 400;
+    font-size: 15px;
+    color: #061e37;
+    text-decoration: none;
+}
+
+section.blog-post-area .big-text h4 span.author {
+    float: right
+}
+
+section.blog-post-area h4 span.author-name {
+    font-weight: 500;
+}
+
+.blog-post-area .single-post h3 a {
+    font-family: Geometria;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #061e37;
+}
+
+.blog-post-area .single-post p {
+    color: #061e37;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    padding-top: 14px;
+    position: relative;
+    text-align: justify;
+}
+
+.blog-post-area .single-post h4 {
+    margin-bottom: 12px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.blog-post-area .single-post h4::before {
+    background: #e6e6e6 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.blog-post-area .single-post p::before {
+    background: #e6e6e6 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.blog-post-area .single-post h3 {
+    margin: 25px 0 15px;
+}
+
+.blog-post-area .pegination {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.blog-post-area .pegination .nav-links {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.blog-post-area .pegination .nav-links .page-numbers {
+    border: 1px solid #448aff;
+    border-radius: 50%;
+    color: #2AF5FF;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    list-style: outside none none;
+    margin-right: 5px;
+    text-align: center;
+    width: 45px;
+}
+
+.blog-post-area .blog-post-area-style {
+    margin: 0 20px 0 40px;
+}
+
+.blog-post-area .pegination .nav-links .page-numbers.current {
+    background: #448aff;
+    color: #fff;
+}
+
+.blog-post-area .pegination .nav-links .page-numbers:hover {
+    background: #448aff;
+    color: #fff;
+}
+
+.blog-post-area .pegination .nav-links a {
+    text-decoration: none;
+}
+
+/*css for single blog page*/
+
+.single-blog-area {
+    margin-bottom: 100px;
+}
+
+.single-blog-area .border-top {
+    border-top: 1px solid #40c4ff;
+}
+
+.single-blog-area h2 {
+    color: #010101;
+    font-family: Geometria;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    margin-top: 45px;
+}
+
+.single-blog-area p {
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 35px;
+    position: relative;
+    text-align: justify;
+}
+
+.single-blog-area .blog-area-part p {
+    margin-top: 30px;
+}
+
+.single-blog-area .for-style {
+    margin-bottom: 50px;
+}
+
+.single-blog-area .for-style p span {
+    color: #40c4ff;
+    float: left;
+    font-family: Geometria;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 18px 30px 20px 20px;
+    position: relative;
+}
+
+.single-blog-area .for-style p span.drop_caps::before {
+    color: #40c4ff;
+    content: "”";
+    font-size: 40px;
+    left: -20px;
+    position: absolute;
+    top: -7px;
+    font-weight: 500;
+}
+
+.single-blog-area .for-style p span::after {
+    color: #40c4ff;
+    content: "”";
+    font-size: 40px;
+    right: -15px;
+    position: absolute;
+    top: -7px;
+    font-weight: 500;
+}
+
+.single-blog-area h3 {
+    color: #757575;
+    font-family: Geometria;
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 65px;
+    margin-bottom: 25px;
+    word-spacing: 15px;
+}
+
+.single-blog-area h3 i.fa-quote-left {
+    float: left;
+    font-size: 55px;
+    font-style: italic;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: #eeeeee;
+}
+
+.single-blog-area h3 i.fa-quote-right {
+    display: inline-block;
+    font-size: 55px;
+    font-style: italic;
+    margin-left: 20px;
+    color: #eeeeee;
+}
+
+.single-blog-area .image-one {
+    padding-right: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.single-blog-area .image-two {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.single-blog-area img {
+    width: 100%
+}
+
+.single-blog-area .blog-area {
+    margin-right: 40px;
+}
+
+.single-blog-area .ads-area {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 30px;
+    padding: 50px 0;
+    position: relative;
+}
+
+.single-blog-area .ads-area img {
+    width: 100%;
+    height: 90px;
+    padding: 0 60px;
+}
+
+.single-blog-area .ads-area p {
+    color: #fff;
+    font-family: Geometria;
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 150px;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    width: 100%;
+}
+
+
+/*comment part start*/
+
+.single-blog-area .commententries h3 {
+    color: #000;
+    font-family: Geometria;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.single-blog-area .commententries h3::before {
+    background: #e6e6e6 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.single-blog-area .commententries ul {
+    margin: 0;
+    padding: 0;
+}
+
+.single-blog-area .commententries ul ul {
+    margin-left: 60px;
+}
+
+.single-blog-area .commententries ul li article.comment {
+    padding-bottom: 13px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.single-blog-area .commententries ul li article.comment:before {
+    background: #e6e6e6 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+}
+.single-blog-area .commententries .author-name h5 a {
+    font-family: Geometria;
+    font-size: 21px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+.single-blog-area .commententries .author-name h5 a {
+    color: #000;
+    font-family: Geometria;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 10px;
+    color: #000;
+    text-decoration: none;
+}
+.single-blog-area .commententries .author-name p {
+    color: #000;
+    font-family: Geometria;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 10px;
+    color: #989191
+}
+.single-blog-area .commententries .comment-body p {
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #989191
+}
+.single-blog-area .commententries .reply p span {
+    color: #989191;
+    font-family: Geometria;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+}
+.single-blog-area .commententries .reply p span i {
+    color: #989191;
+    margin-right: 10px;
+}
+.single-blog-area .commententries ul {
+    overflow: hidden;
+}
+.single-blog-area .commententries ul li {
+    list-style: none
+}
+.commententries .comment-author {
+    border-radius: 50%;
+    float: left;
+    height: 55px;
+    width: 55px;
+}
+.commententries .comment-details {
+    margin-left: 70px;
+}
+.single-blog-area form input {
+    border: 1px solid #e6e6e6;
+    margin: 0;
+    padding: 12px 22px;
+    border-radius: 5px;
+    width: 100%
+}
+.single-blog-area form input[placeholder] {
+    color: #000;
+    font-family: Geometria;
+    font-size: 16px;
+    font-weight: 500;
+}
+.single-blog-area form .name {
+    float: left;
+    margin-bottom: 15px;
+    width: 50%;
+}
+.single-blog-area form .email {
+    width: 50%;
+    float: right;
+}
+.single-blog-area form .name input {
+    width: 95%;
+}
+.single-blog-area form .name .name {
+    margin-right: 20px;
+}
+.single-blog-area form .email input {
+    width: 95%;
+}
+.single-blog-area form .comment {
+    margin-right: 150px;
+}
+.single-blog-area form .post {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.single-blog-area form .post input[type="submit"] {
+    background: #40c4ff none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 38px;
+    right: -150px;
+    text-transform: uppercase;
+    width: auto;
+}
+.single-blog-area form {
+    margin: 50px 0 0;
+    position: relative;
+}
+
+/*comment part end*/
+.grid .portfolio-item {
+    margin-bottom: 30px;
+}
+.grid .portfolio-item img {
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+.single-blog-area .grid .portfolio-item .portfolio-text {
+    margin-left: 110px;
+}
+.single-blog-area .grid .portfolio-item .portfolio-text h5 {
+    margin: 0
+}
+.single-blog-area .grid .portfolio-item .portfolio-text h5 a {
+    color: #000;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 27px;
+    text-decoration: none;
+}
+.single-blog-area .grid .portfolio-item .portfolio-text p {
+    font-family: Geometria;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #b2b2b2;
+}
+.single-blog-area .grid .portfolio-item .portfolio-text p span {
+    margin: 0 10px;
+}
+.single-blog-area .button-group button {
+    border: medium none;
+    border-radius: 0;
+    color: #000;
+    display: inline-block;
+    font-family: Geometria;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: -2px;
+    padding: 21px;
+    text-transform: uppercase;
+    width: 33%;
+}
+.single-blog-area .button-group {
+    margin: 40px 0;
+}
+.single-blog-area .button-group button.is-checked {
+    background: #40c4ff;
+    color: #fff;
+}
+.single-blog-area .button-group button:hover {
+    background: #40c4ff;
+    color: #fff;
+}
+.single-blog-area .sidebar-ads {
+    width: 300px;
+    position: relative;
+}
+.single-blog-area .sidebar-ads p {
+    color: #fff;
+    font-family: Geometria;
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    text-align: center;
+    top: 85px;
+    width: 100%;
+}
+.single-blog-area h2.sidebar-title {
+    background: #efefef none repeat scroll 0 0;
+    color: #000;
+    font-family: Geometria;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 21px 25px;
+    text-transform: uppercase;
+}
+.single-blog-area .tags p {
+    background: #40c4ff none repeat scroll 0 0;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: Geometria;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 4px;
+    padding: 0 12px;
+    margin-bottom: 7px;
+}
+.single-blog-area .tags p a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
+.single-blog-area .newsletter form {
+    margin: 30px 0 0;
+}
+.single-blog-area .newsletter input[type="email"] {
+    width: 50%;
+    margin-right: 20px;
+}
+.single-blog-area .newsletter input[type="submit"] {
+    width: 40%;
+    background: #40c4ff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+}
+#footer {
+  background: #1C448E;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+.links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+.address {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+      <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/Sam.jpg" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          
+          <li class="menu-has-children"><a href="">Menu</a>
+            <ul>
+              <li><a href="Favourite girl.html">About Us</a></li>
+               <li><a href="contact me.html">Contact Me</a></li>
+               <li><a href="Help.html">Help</a></li>
+               <li><a href="Privacy.html">Privacy</a></li>
+              
+            </ul>
+          </li>
+        
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <div class="read">
+  <h2>Read</h2>
+</div>
+
+    <div class="wrapper">
+       
+       
+        <section class="blog-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="blog-post-area-style">
+                            
+                                    <div class="col-md-3">
+                                <div class="single-post">
+                                    <img src="img/Read me.jpg" alt="" height="177" width="284">
+                                    <h3><a href="bible reading during corona.html">Bible reading during Corona.</a></h3>
+                                    <h4><span>Posted By: <span class="author-name">Samuel Njoroge</span></span>
+                                    </h4>
+                                    <p>The Covid-19 pandemic has been on for the past few months...</p>
+      <a href="bible reading during corona.html" class="btn tm-btn-gray">Read More</a>  
+                                    <h4><span>5th May 2020</span></h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="single-post">
+                                    <img src="img/Worship.jpg" height="177" width="284" alt="">
+                                    <h3><a href="have you prayed today.html">Have you prayed today?</a></h3>
+                                    <h4><span>Posted By: <span class="author-name">Sharon Murugi</span></span>
+                                    </h4>
+                                   <p>We are in the Covid-19 season which we are trusting God to....</p>
+       <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a> 
+                                    <h4><span>10th May 2020</span></h4>
+                                </div>
+                            </div>
+                             <div class="col-md-3">
+                                <div class="single-post">
+                                    <img src="img/Desiring God.jpg" height="177" width="284" alt="">
+                                    <h3><a href="#">Do not limit yourself.</a></h3>
+                                    <h4><span>Posted By: <span class="author-name">Dinah Wangari</span></span>
+                                    </h4>
+                                    <p>Don't limit yourself, God can use anyone....</p>
+                                    <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a>
+                                    <h4><span>15th May 2020</span></h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="single-post">
+                                    <img src="img/Happy people.jpg" alt="" height="177" width="284">
+                                    <h3><a href="#">Come as you are and be freed</a></h3>
+                                    <h4><span>Posted By: <span class="author-name">Ruth Wamuyu</span></span>
+                                    </h4>
+                                    <p>Let Christ do the work of cleaning you up, come as you are...</p>
+                                    <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a>
+                                    <h4><span>20th May 2020</span></h4>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pegination">
+                <!--
+                <ul>
+                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                </ul>
+-->
+
+                <div class="nav-links">
+                    <span class="page-numbers current">1</span>
+                   <a class="page-numbers" href="index 2.html">2</a>
+                    <a class="page-numbers" href="#">3</a>
+                    <a class="page-numbers" href="#">4</a>
+                    <a class="page-numbers" href="#">5</a>
+                    <a class="page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+      
+    </div>
+
+    <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+          </div>
+            <div class="links">
+            
+             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+          </div>
+          <div class="address">
+            
+            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/active.js"></script>
+</body>
+
+</html>
